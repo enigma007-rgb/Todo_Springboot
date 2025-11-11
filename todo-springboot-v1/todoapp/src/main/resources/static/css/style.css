@@ -1,0 +1,120 @@
+* {
+    font-family: 'Urbanist', sans-serif;
+    color: #ffffffcf !important;
+
+}
+
+body {
+    background-color: #E8E8E9;
+     background: url("https://raw.githubusercontent.com/lucasromerodb/liquid-glass-effect-macos/refs/heads/main/assets/flowers.jpg")
+     center center;
+     background-size: 500px;
+     animation: moveBackground 10s linear infinite;
+}
+.todo-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.todo-input {
+    border-radius: 30px 0 0 30px;
+    border: 1px solid #ccc; /* Add a visible border */
+    background-color: #f1f1f1;
+    padding: 0px 20px;
+}
+.todo-input:focus {
+    
+    box-shadow: none;          /* Keep shadow disabled */
+    outline: none;             /* Clean focus style */
+}
+.btn-add {
+    border-radius: 0 30px 30px 0;
+    background-color: #e85c008f;
+    color: #ffffffcf;
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    white-space: nowrap;         /* Prevent line break */
+    display: flex;
+    align-items: center;
+    gap: 5px;                    /* Adds space between "ADD" and "+" */
+}
+.btn-add:hover {
+    background-color: #e85c008f;
+}
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.todo-text {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+.check-icon {
+    color: orange;
+}
+.delete-btn {
+    color: #666;
+    background: none;
+    border: none;
+}
+.unchecked-icon {
+    color: #ff6a00;
+    font-size: 18px;
+}
+.todo-list {
+    max-height: 300px;          /* Set the maximum height */
+    overflow-y: auto;           /* Enable vertical scrollbar if needed */
+    padding-right: 10px;         /* Space for scrollbar */
+}
+
+/* Optional: Add custom scrollbar styling (optional aesthetic) */
+.todo-list::-webkit-scrollbar {
+    width: 6px;
+}
+.todo-list::-webkit-scrollbar-thumb {
+    background-color: #ff6a00;
+    border-radius: 10px;
+}
+.todo-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.lg-liquid{
+  border-radius: 5.2vmin 4.8vmin 5.2vmin 4.8vmin;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.3),
+    inset -2px -2px 2px 1px rgba(255, 255, 255, 0.3), 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);;
+
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.5);
+
+}
+
+@keyframes moveBackground {
+
+  0% {
+          background-position: 0% 0%; /* Start at the top */
+        }
+        50% {
+          background-position: 0% -200%; /* Move to the bottom */
+        }
+        100% {
+          background-position: 0% 0%; /* Return to the top */
+        }
+      }
+}
+
+
+
